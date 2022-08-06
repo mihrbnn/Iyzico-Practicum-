@@ -1,0 +1,65 @@
+h1{
+    color: brown;
+}
+body{
+    text-align: center;
+    background-color: #DBDFFD;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2E0249;
+    padding: 18px;
+}
+
+p{
+    color:#764AF1;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.header{
+    padding: 40px;
+}
+
+/* home */
+
+.home{
+    color: #2E0249;
+}
+
+#home-link{
+    padding: 0px;
+    text-decoration: underline;
+}
+
+ul{
+    list-style:none;
+    padding: 10px;
+}
+
+ul>li{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #764AF1;
+}
+
+/* about */
+#about-text{
+    color: #2E0249;
+}
+
+
+/* products */
+
+.book-text{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+span{
+    padding: 10px;
+}
