@@ -99,4 +99,10 @@
   padding-top: 12px;
 }
 
-  
+.list-group>span{
+  margin-left: auto;
+}
+
+.card-header>.mt-2{
+  float: right;
+}
