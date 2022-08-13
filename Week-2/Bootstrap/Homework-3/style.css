@@ -135,3 +135,29 @@
     background-color: white;
   }
 
+  .like-text{
+    font-size: 13px;
+     color: #474747;
+  }
+
+  .far{
+    font-size: 1.2rem
+  }
+  .posttext>a{
+    color: black
+  }
+
+.fa-linkedin{
+  color: #0a66c2; 
+  font-size: 2.4rem
+}
+
+.right-card{
+  width: 19rem
+}
+
+.profile-pic{
+  width: 20px;
+  height: 20px;
+  border-radius:100% 
+}
