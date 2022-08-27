@@ -1,7 +1,6 @@
 let addButton = document.querySelector("#liveToastBtn");
 let ulDOM = document.querySelector("#list");
-let removeTask = document.createElement("span");
-removeTask.innerHTML = "X";
+
 
 const newElement = () => {
   let taskInput = document.querySelector("#task");
@@ -13,6 +12,8 @@ const newElement = () => {
       "justify-content-between",
       "align-items-center"
     );
+    let removeTask = document.createElement("span");
+removeTask.innerHTML = "X";
     task.innerHTML = taskInput.value;
     task.appendChild(removeTask);
     ulDOM.appendChild(task);
