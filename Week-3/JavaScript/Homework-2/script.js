@@ -13,7 +13,7 @@ const newElement = () => {
       "align-items-center"
     );
     let removeTask = document.createElement("span");
-removeTask.innerHTML = "X";
+    removeTask.innerHTML = "X";
     task.innerHTML = taskInput.value;
     task.appendChild(removeTask);
     ulDOM.appendChild(task);
