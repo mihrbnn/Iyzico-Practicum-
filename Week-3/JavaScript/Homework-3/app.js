@@ -76,21 +76,47 @@ const menu = [
 const buttonContainer = document.querySelector(".btn-container");
 const foodSection = document.querySelector(".section-center");
 
-//create buttons function
 
-const createButton = (buttonName) => {
-  let button = document.createElement("button");
-  button.innerHTML = buttonName;
-  button.classList.add("btn", "btn-outline-dark", "me-3");
-  buttonContainer.appendChild(button);
+const buttonNames = [
+  {
+    index:0,
+    name:"All"
+  },
+  {
+    index:1,
+    name:"Korea"
+  },
+  {
+    index:2,
+    name:"Japan"
+  },
+  {
+    index:3,
+    name:"China"
+  }
+]
+
+const createButton = () => {
+
+  buttonNames.map((item)=>{
+    let button = document.createElement("button");
+    button.innerHTML = item.name;
+    button.classList.add("btn", "btn-outline-dark", "me-3");
+    buttonContainer.appendChild(button);
+    button.addEventListener(
+      "click",
+      () => {
+        food(item.name);
+      },
+      {
+        // This will invoke the event once and de-register it afterward
+        once: true,
+      }
+    );
+  })
 };
 
-// create buttons
-
-const allButton = createButton("All");
-const koreaButton = createButton("Korea");
-const japanButton = createButton("Japan");
-const chinaButton = createButton("China");
+createButton()
 
 const food = (category) => {
   const menuItem = menu.filter((menuItem) => menuItem.category === category);
@@ -104,7 +130,7 @@ const food = (category) => {
     title.innerText = `${item.title}`;
     desc.innerText = `${item.desc}`;
     price.innerText = `${item.price}`;
-    img.innerHTML = `<img src=${item.img} alt="Girl in a jacket"/>`;
+    img.innerHTML = `<img src=${item.img} alt="food"/>`;
 
     foodSection.appendChild(title);
     foodSection.appendChild(desc);
@@ -113,17 +139,4 @@ const food = (category) => {
   });
 };
 
-const dum = document.createElement("button");
-dum.innerHTML = "dumbutton";
-buttonContainer.appendChild(dum);
 
-dum.addEventListener(
-  "click",
-  () => {
-    food("China");
-  },
-  {
-    // This will invoke the event once and de-register it afterward
-    once: true,
-  }
-);
